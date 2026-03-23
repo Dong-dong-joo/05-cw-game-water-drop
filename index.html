@@ -17,15 +17,34 @@
     <div class="score">Score: <span id="score">0</span></div>
     <div class="timer">Time: <span id="time">30</span>s</div>
 
+    <select id="difficulty">
+      <option value="easy">Easy</option>
+      <option value="normal" selected>Normal</option>
+      <option value="hard">Hard</option>
+    </select>
+
     <button id="start-btn">Start Game</button>
     <button id="reset-btn">Reset</button>
   </div>
 
-  <p id="message">Click Start to begin the game!</p>
+  <p id="message">Click Start to begin!</p>
 
   <div id="game-container"></div>
 
 </div>
+
+<!-- 🔊 Sound Effects -->
+<audio id="pop-sound" src="Bubblepop.mp3"></audio>
+<audio id="win-sound" src="Win.mp3"></audio>
+<audio id="gameover-sound" src="Gameover.mp3"></audio>
+
+<!-- Footer -->
+<footer>
+  <p>
+    Learn more or donate at 
+    <a href="https://www.charitywater.org/" target="_blank">charity: water</a>
+  </p>
+</footer>
 
 <script src="script.js"></script>
 

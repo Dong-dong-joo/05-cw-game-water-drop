@@ -6,12 +6,12 @@
 
 body {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   min-height: 100vh;
 
   background-color: #f4f8fb;
-  font-family: Arial, sans-serif;
+  font-family: "Avenir", Arial, sans-serif;
 }
 
 .game-wrapper {
@@ -32,8 +32,9 @@ body {
 
 .score-panel {
   display: flex;
-  gap: 15px;
+  gap: 10px;
   align-items: center;
+  flex-wrap: wrap;
 
   background: white;
   padding: 10px 20px;
@@ -86,9 +87,7 @@ body {
 .water-drop {
   position: absolute;
   border-radius: 50%;
-
   animation: dropFall linear forwards;
-
   cursor: pointer;
 }
 
@@ -102,37 +101,29 @@ body {
 
 .confetti {
   position: absolute;
-
   width: 10px;
   height: 10px;
-
   animation: confettiFall 2s linear forwards;
 }
 
+footer {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
 @keyframes dropFall {
-  from {
-    transform: translateY(-60px);
-  }
-  to {
-    transform: translateY(620px);
-  }
+  from { transform: translateY(-60px); }
+  to { transform: translateY(620px); }
 }
 
 @keyframes confettiFall {
-  from {
-    transform: translateY(-20px);
-  }
-  to {
-    transform: translateY(650px);
-    opacity: 0;
-  }
+  from { transform: translateY(-20px); }
+  to { transform: translateY(650px); opacity: 0; }
 }
 
 @media (max-width: 850px) {
-
   #game-container {
     width: 95vw;
     height: 70vh;
   }
-
 }
